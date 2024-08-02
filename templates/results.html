@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .summary-table {
+            margin-bottom: 20px;
+        }
+        .data-table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5">Results</h1>
+    <div class="summary-table">
+        <h2>WACC and LTGR Summary</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mean WACC</td>
+                    <td>{{ summary.mean_wacc }}</td>
+                </tr>
+                <tr>
+                    <td>Median WACC</td>
+                    <td>{{ summary.median_wacc }}</td>
+                </tr>
+                <tr>
+                    <td>Mean LTGR</td>
+                    <td>{{ summary.mean_ltgr }}</td>
+                </tr>
+                <tr>
+                    <td>Median LTGR</td>
+                    <td>{{ summary.median_ltgr }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="data-table">
+        <h2>Details</h2>
+        {{ tables|safe }}
+    </div>
+    <a href="/" class="btn btn-primary mt-3">Go Back</a>
+</div>
+</body>
+</html>
